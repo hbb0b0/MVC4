@@ -1,0 +1,62 @@
+﻿@using Step1.App_Code;
+@{
+    ViewBag.Title = "Index";
+    ViewBag.Message = "Hello ViewBag";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@helper  sum(int a,int b){
+   var result = a+b;
+   @result;
+}
+
+<h2>Index</h2>
+<div>
+   @ViewBag.Message
+  
+</div>
+<div>
+    
+    <table>
+        <tr>
+            <td>
+                Function Scope
+            </td>
+            <td>
+                example
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Page view
+            </td>
+            <td>
+                 3+5=@sum(3,5)
+                 <br />
+                 7+8=@sum(7,8)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                App_Code .cs
+            </td>
+            <td>
+                 3*5=@MathHelper.mutiply(3,5)
+                 <br />
+                 7*8=@MathHelper.mutiply(7,8)
+            </td>
+        </tr>
+         <tr>
+            <td>
+                App_Code cshtml
+            </td>
+            <td>
+              
+
+                4*5= @MyFunction.mutiply(4,5)
+                <br />
+                6*7= @MyFunction.mutiply(6,7)
+            </td>
+        </tr>
+    </table>
+</div>

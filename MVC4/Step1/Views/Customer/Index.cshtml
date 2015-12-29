@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div>
+    @for (int i = 0; i < 4; i++)
+    {
+        @Html.Raw(string.Format("<div style=\"color:blue;font-size:{0}pt\"> 你好，李依辰</div>", (5*i).ToString()));
+        @Html.Raw(string.Format("<div style=\"color:red;font-size:{0}pt\"> 你好，高子轩</div>", (5 * i).ToString()));
+        @Html.Raw(string.Format("<div style=\"color:green;font-size:{0}pt\">胡晓萍 </div>", (5 * i).ToString()));
+
+    }
+    
+
+</div>
